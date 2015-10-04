@@ -2,6 +2,35 @@
   <h1>Welcome to Meteor!</h1>
 
   {{> hello}}
+
+
+<div class="ui inverted segment">
+  <div class="ui inverted progress" data-percent="12">
+    <div class="bar" style="transition: 300ms; -webkit-transition: 300ms; width: 12%;">
+      <div class="progress">12%</div>
+    </div>
+    <div class="label">Uploading Files</div>
+  </div>
+  <div class="ui inverted progress success" data-percent="100">
+    <div class="bar" style="transition: 300ms; -webkit-transition: 300ms; width: 100%;">
+      <div class="progress">100%</div>
+    </div>
+    <div class="label">Success</div>
+  </div>
+  <div class="ui inverted progress warning" data-percent="100">
+    <div class="bar" style="transition: 300ms; -webkit-transition: 300ms; width: 100%;">
+      <div class="progress">100%</div>
+    </div>
+    <div class="label">Warning</div>
+  </div>
+  <div class="ui inverted progress error" data-percent="100">
+    <div class="bar" style="transition: 300ms; -webkit-transition: 300ms; width: 100%;">
+      <div class="progress">100%</div>
+    </div>
+    <div class="label">Error</div>
+  </div>
+</div>
+
 </body>
 
 <template name="hello">
