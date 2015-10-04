@@ -21,6 +21,7 @@ insecure                # Allow all DB writes from clients (for prototyping)
 semantic:ui
 flemay:less-autoprefixer
 orionjs:core
-dvz:orion-semantic-ui
 kadira:flow-router
 kadira:blaze-layout
+orionjs:bootstrap
+nicolaslopezj:orion-admin-only-bootstrap
