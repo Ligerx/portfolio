@@ -25,3 +25,4 @@ kadira:flow-router
 kadira:blaze-layout
 orionjs:bootstrap
 nicolaslopezj:orion-admin-only-bootstrap
+orionjs:summernote
