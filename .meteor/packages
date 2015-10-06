@@ -27,3 +27,5 @@ orionjs:summernote
 arillo:flow-router-helpers
 meteorhacks:fast-render
 richsilv:owl-carousel
+orionjs:filesystem
+orionjs:s3
