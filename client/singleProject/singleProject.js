@@ -1,6 +1,9 @@
 Template.singleProject.helpers({
   project: function() {
-    let param = FlowRouter.getParam('projectUrl'); // the /:projectUrl param
+    // the '/:projectUrl' param
+    let param = FlowRouter.getParam('projectUrl');
+
+    // make sure to findOne so {{#with }} works
     return Projects.findOne({ url: param });
   }
 });
