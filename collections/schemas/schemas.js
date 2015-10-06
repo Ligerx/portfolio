@@ -50,6 +50,13 @@ ProjectSchema = new SimpleSchema({
       label: 'Description'
   }),
 
+  /**
+   * link to the thumbnail show on the home page
+   */
+  thumbnailUrl: {
+    type: String
+  },
+
   sections: {
     type: [SectionSchema],
     label: "Sections"
