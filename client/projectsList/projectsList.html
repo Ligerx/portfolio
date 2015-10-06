@@ -1,0 +1,15 @@
+<template name="projectsList">
+  <h2>testing projects list!</h2>
+
+  <p>{{currentRouteName}}</p>
+
+  {{#if isSubReady 'allProjects'}}
+    <h2>testing wtf</h2>
+
+    {{#each projects}}
+      <a href="{{pathFor 'project' projectUrl=url}}">{{title}}</a>
+    {{/each}}
+  {{else}}
+    <p>Loading...</p>
+  {{/if}}
+</template>
