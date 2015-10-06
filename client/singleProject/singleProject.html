@@ -2,4 +2,15 @@
   <h2>testing single project!</h2>
 
   <p>{{currentRouteName}}</p>
+  <p>{{param 'projectUrl'}}</p>
+  <p>blah!</p>
+
+  {{#if isSubReady 'allProjects'}}
+    {{#with project}}
+      <h3>{{title}}</h3>
+    {{/with}}
+  {{else}}
+    <p>Loading...</p>
+  {{/if}}
+
 </template>
