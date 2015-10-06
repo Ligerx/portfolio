@@ -6,8 +6,8 @@
   {{#if isSubReady 'allProjects'}}
     <h2>testing wtf</h2>
 
-    {{#each projects}}
-      <a href="{{pathFor 'project' projectUrl=url}}">{{title}}</a>
+    {{#each project in projects}}
+      {{> projectCard project=project}}
     {{/each}}
   {{else}}
     <p>Loading...</p>
