@@ -1,24 +1,45 @@
-ProjectSchema = new SimpleSchema({
+SectionSchema = new SimpleSchema({
   title: {
     type: String
   },
 
-  /**
-   * Here it's the same with an image attribute.
-   * summernote is an html editor.
-   */
-  body: orion.attribute('summernote', {
-      label: 'Body'
+  description: orion.attribute('summernote', {
+    label: 'Description'
   }),
 
-  array: {
-    type: [String],
-    label: "Array test",
+  imageUrls: {
+    type: [String]
+  },
+});
+
+
+ProjectSchema = new SimpleSchema({
+  /**
+   * what is show in the URL when viewing this page.
+   * Also sort of acts like an index.
+   */
+  url: {
+    type: String
   },
 
-  /**
-   * This attribute sets the user id to that of the user that created
-   * this post automatically.
-   */
+  title: {
+    type: String
+  },
+
+  active: {
+    label: "Active?",
+    type: Boolean,
+    defaultValue: true
+  },
+
+  description: orion.attribute('summernote', {
+      label: 'Description'
+  }),
+
+  sections: {
+    type: [SectionSchema],
+    label: "Sections"
+  },
+
   createdAt: orion.attribute('createdAt')
 });
