@@ -3,6 +3,13 @@ SectionSchema = new SimpleSchema({
     type: String
   },
 
+  /**
+   * Used to order projects
+   */
+  priority: {
+    type: Number
+  },
+
   description: orion.attribute('summernote', {
     label: 'Description'
   }),
@@ -30,6 +37,13 @@ ProjectSchema = new SimpleSchema({
     label: "Active?",
     type: Boolean,
     defaultValue: true
+  },
+
+  /**
+   * Used to order projects
+   */
+  priority: {
+    type: Number
   },
 
   description: orion.attribute('summernote', {

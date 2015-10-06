@@ -5,9 +5,10 @@ Projects = new orion.collection('projects', {
 
   tabular: {
     columns: [
+      { data: 'url', title: 'URL'},
       { data: "title", title: "Title" },
-      orion.attributeColumn('summernote', 'body', 'Body'),
-      { data: 'array', title: 'blarg' }
+      { data: 'active', title: 'Active?'},
+      { data: 'priority', title: 'Priority'},
     ]
   }
 });
