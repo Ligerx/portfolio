@@ -6,9 +6,12 @@
   {{#if isSubReady 'allProjects'}}
     <h2>testing wtf</h2>
 
-    {{#each project in projects}}
-      {{> projectCard project=project}}
-    {{/each}}
+    <div class="ui three column grid container">
+      {{#each project in projects}}
+        {{> projectCard project=project}}
+      {{/each}}
+    </div>
+
   {{else}}
     <p>Loading...</p>
   {{/if}}
