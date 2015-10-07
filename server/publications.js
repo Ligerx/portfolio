@@ -12,3 +12,14 @@ Meteor.publish('allProjects', () => {
     reactive: false
   });
 });
+
+Meteor.publish('allSections', () => {
+  return Sections.find({},
+  {
+    // Sort by descending priority.
+    sort: { priority: -1 },
+
+    // Disable reactivity because I don't need it!
+    reactive: false
+  });
+});
