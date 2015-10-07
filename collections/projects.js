@@ -32,11 +32,6 @@ SectionSchema = new SimpleSchema({
     type: Number
   },
 
-  description: orion.attribute('summernote', {
-    label: 'Description',
-    optional: true
-  }),
-
   // Array of images + their alt description
   images: {
     type: [Object],
@@ -56,6 +51,11 @@ SectionSchema = new SimpleSchema({
     type: String,
     optional: true
   },
+
+  description: orion.attribute('summernote', {
+    label: 'Description',
+    optional: true
+  }),
 
   isFullWidth: {
     type: Boolean,

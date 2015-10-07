@@ -1,7 +1,7 @@
 <template name="projectSection" args="section">
   {{#with section}}
 
-    <h3>{{title}}</h3>
+    <h2 class="ui header">{{title}}</h2>
 
     {{#if isFullWidth}}
       {{> fullWidth}}
@@ -15,7 +15,7 @@
 
 <template name="fullWidth">
   <div class="column">
-    {{> imageGallery}}
+    {{> imageTemplate}}
   </div>
 
   <div>
@@ -25,16 +25,32 @@
 
 
 <template name="halfWidth">
-  <div class="ui two column grid"></div>
+  <div class="ui two column grid">
     <div class="column">
       {{{description}}}
     </div>
 
     <div class="column">
-      {{> imageGallery}}
+      {{> imageTemplate}}
     </div>
+  </div>
 </template>
 
+
+<template name="imageTemplate">
+  {{#if onlyOneImage images}}
+
+    {{!-- no clean way to get the index, so just iterate --}}
+    {{#each imageObj in images}}
+      <div>
+        <img src="{{imageObj.image.url}}" alt="{{imageObj.alt}}" class="ui centered image">
+      </div>
+    {{/each}}
+
+  {{else}}
+    {{> imageGallery}}
+  {{/if}}
+</template>
 
 <template name="imageGallery">
   <div class="owl-carousel">
