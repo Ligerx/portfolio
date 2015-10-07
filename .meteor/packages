@@ -29,3 +29,5 @@ meteorhacks:fast-render
 richsilv:owl-carousel
 orionjs:filesystem
 orionjs:s3
+orionjs:image-attribute
+orionjs:relationships
