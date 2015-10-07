@@ -1,16 +1,21 @@
 <template name="singleProject">
-  <h2>testing single project!</h2>
-
-  <p>{{currentRouteName}}</p>
-  <p>{{param 'projectUrl'}}</p>
-  <p>blah!</p>
-
   {{#if isSubReady 'allProjects'}}
+
     {{#with project}}
-      <h3>{{title}}</h3>
+      <div class="ui main container">
+        <h1 class="ui header">{{title}}</h1>
+
+        <div>
+          {{{description}}}
+        </div>
+
+        {{#each section in sections}}
+          {{> projectSection section=section}}
+        {{/each}}
+      </div>
     {{/with}}
+
   {{else}}
     <p>Loading...</p>
   {{/if}}
-
 </template>

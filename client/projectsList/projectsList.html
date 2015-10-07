@@ -1,12 +1,7 @@
 <template name="projectsList">
-  <h2>testing projects list!</h2>
-
-  <p>{{currentRouteName}}</p>
-
   {{#if isSubReady 'allProjects'}}
-    <h2>testing wtf</h2>
 
-    <div class="ui three column grid container">
+    <div class="ui main three column grid container">
       {{#each project in projects}}
         {{> projectCard project=project}}
       {{/each}}
