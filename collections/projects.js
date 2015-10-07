@@ -142,6 +142,10 @@ ProjectSchema = new SimpleSchema({
     optional: true
   }),
 
+  pageImageAlt: {
+    type: String
+  },
+
   sections: orion.attribute('hasMany', {
     label: 'Sections',
     optional: true
