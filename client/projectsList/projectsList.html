@@ -1,7 +1,7 @@
 <template name="projectsList">
   {{#if isSubReady 'allProjects'}}
 
-    <div class="ui main three column grid container">
+    <div class="ui main three column stackable grid container">
       {{#each project in projects}}
         {{> projectCard project=project}}
       {{/each}}
