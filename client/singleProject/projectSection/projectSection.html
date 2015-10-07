@@ -3,24 +3,45 @@
 
     <h3>{{title}}</h3>
 
-    <div>
-      {{{description}}}
-    </div>
+    {{#if isFullWidth}}
+      {{> fullWidth}}
+    {{else}}
+      {{> halfWidth}}
+    {{/if}}
 
   {{/with}}
 </template>
 
 
 <template name="fullWidth">
+  <div class="column">
+    {{> imageGallery}}
+  </div>
 
+  <div>
+    {{{description}}}
+  </div>
 </template>
 
 
 <template name="halfWidth">
+  <div class="ui two column grid"></div>
+    <div class="column">
+      {{{description}}}
+    </div>
 
+    <div class="column">
+      {{> imageGallery}}
+    </div>
 </template>
 
 
-<template name="gallery">
-
+<template name="imageGallery">
+  <div class="owl-carousel">
+    {{#each imageObj in images}}
+      <div>
+        <img src="{{imageObj.image.url}}" alt="{{imageObj.alt}}">
+      </div>
+    {{/each}}
+  </div>
 </template>
