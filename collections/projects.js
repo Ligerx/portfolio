@@ -57,7 +57,7 @@ SectionSchema = new SimpleSchema({
     optional: true
   },
 
-  isFullLength: {
+  isFullWidth: {
     type: Boolean,
     defaultValue: false,
     label: 'Stretch image(s) to full length?'
