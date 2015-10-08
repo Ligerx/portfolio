@@ -21,5 +21,5 @@ Template.imageGallery.onRendered(function() {
 });
 
 Template.imageGallery.onDestroyed(function() {
-  this.$(".owl-carousel").data('owlCarousel').destroy();
+  this.$(".owl-carousel").trigger('destroy.owl.carousel');
 });
