@@ -3,7 +3,9 @@
 
     {{#with project}}
       <div class="ui main container">
-        <img src="{{pageImage.url}}" alt="{{pageImage.alt}}" class="ui centered image">
+        {{> imageTemplate}}
+
+        {{{arbitraryHtml}}}
 
         <h1 class="ui huge header">{{title}}</h1>
 
