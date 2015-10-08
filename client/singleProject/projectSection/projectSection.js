@@ -1,6 +1,10 @@
 Template.imageTemplate.helpers({
   noImages: function(images) {
-    return (images.length === 0) ? true : false;
+    if(!images || images.length === 0) {
+      return true;
+    }
+
+    return false;
   },
 
   onlyOneImage: function(images) {
