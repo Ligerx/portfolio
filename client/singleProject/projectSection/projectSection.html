@@ -38,31 +38,33 @@
 
 
 <template name="imageTemplate">
-  {{#if noImages images}}
-    {{!-- blank --}}
-
-  {{else}}
-    {{#if onlyOneImage images}}
-
-      {{!-- no clean way to get the index, so just iterate --}}
-      {{#each imageObj in images}}
-        <div>
-          <img src="{{imageObj.image.url}}" alt="{{imageObj.alt}}" class="ui centered image">
-        </div>
-      {{/each}}
+  <div class="imageTemplate">
+    {{#if noImages images}}
+      {{!-- blank --}}
 
     {{else}}
-      {{> imageGallery}}
-    {{/if}}
+      {{#if onlyOneImage images}}
 
-  {{/if}}
+        {{!-- no clean way to get the index, so just iterate --}}
+        {{#each imageObj in images}}
+          <div>
+            <img src="{{imageObj.image.url}}" alt="{{imageObj.alt}}" class="ui centered image">
+          </div>
+        {{/each}}
+
+      {{else}}
+        {{> imageGallery}}
+      {{/if}}
+
+    {{/if}}
+  </div>
 </template>
 
 <template name="imageGallery">
   <div class="owl-carousel">
     {{#each imageObj in images}}
       <div>
-        <img src="{{imageObj.image.url}}" alt="{{imageObj.alt}}">
+        <img src="{{imageObj.image.url}}" alt="{{imageObj.alt}}" class="ui centered image">
       </div>
     {{/each}}
   </div>
