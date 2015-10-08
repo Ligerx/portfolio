@@ -1,5 +1,8 @@
 Template.projectsList.helpers({
   projects: () => {
-    return Projects.find({}, { sort: { priority: -1 } });
+    return Projects.find({}, {
+        sort: { priority: -1 },
+        reactive: false
+    });
   }
 });

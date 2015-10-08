@@ -15,6 +15,9 @@ Template.singleProject.helpers({
     let project = Projects.findOne({ url: param });
 
     let sectionIds = project.sections;
-    return Sections.find({ _id: { $in: sectionIds } }, { sort: { priority: -1 } });
+    return Sections.find({ _id: { $in: sectionIds } }, {
+      sort: { priority: -1 },
+      reactive: false
+  });
   }
 });
