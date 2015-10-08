@@ -124,26 +124,30 @@ ProjectSchema = new SimpleSchema({
       optional: true
   }),
 
-  // Whatever's here will be rendered as is
-  arbitraryHtml: {
-    type: String,
-    optional: true
-  },
-
   // image show on the home page
   cardImage: orion.attribute('image', {
     label: 'Home page image',
     optional: true
   }),
 
-  // image show on the project page
-  pageImage: orion.attribute('image', {
-    label: 'This page image',
+  // images show on the project page
+  images: {
+    type: [Object],
     optional: true
+  },
+
+  'images.$.image': orion.attribute('image', {
+    label: 'Image'
   }),
 
-  pageImageAlt: {
+  'images.$.alt': {
     type: String
+  },
+
+  // Whatever's here will be rendered as is
+  arbitraryHtml: {
+    type: String,
+    optional: true
   },
 
   sections: orion.attribute('hasMany', {
