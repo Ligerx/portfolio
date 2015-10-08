@@ -38,17 +38,23 @@
 
 
 <template name="imageTemplate">
-  {{#if onlyOneImage images}}
-
-    {{!-- no clean way to get the index, so just iterate --}}
-    {{#each imageObj in images}}
-      <div>
-        <img src="{{imageObj.image.url}}" alt="{{imageObj.alt}}" class="ui centered image">
-      </div>
-    {{/each}}
+  {{#if noImages images}}
+    {{!-- blank --}}
 
   {{else}}
-    {{> imageGallery}}
+    {{#if onlyOneImage images}}
+
+      {{!-- no clean way to get the index, so just iterate --}}
+      {{#each imageObj in images}}
+        <div>
+          <img src="{{imageObj.image.url}}" alt="{{imageObj.alt}}" class="ui centered image">
+        </div>
+      {{/each}}
+
+    {{else}}
+      {{> imageGallery}}
+    {{/if}}
+
   {{/if}}
 </template>
 
