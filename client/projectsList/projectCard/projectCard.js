@@ -9,3 +9,9 @@ Template.projectCard.helpers({
     return project.cardImage.url;
   }
 });
+
+Template.projectCard.onRendered(function() {
+  this.$('.ui.card').dimmer({
+    on: 'hover'
+  });
+});

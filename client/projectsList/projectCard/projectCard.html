@@ -1,9 +1,28 @@
 <template name="projectCard" args="project">
   <div class="column">
-    <a href="{{pathFor 'project' projectUrl=project.url}}">
+
+    <a class="ui blurring dimmable fluid card" href="{{pathFor 'project' projectUrl=project.url}}">
+
+        <div class="ui dimmer">
+          <div class="content">
+            <div class="center">
+              <h2 class="inverted">{{project.title}}</h2>
+              <i class="inverted large grey add circle icon"></i>
+            </div>
+          </div>
+        </div>
 
       <img class="ui fluid image" src="{{imageUrl project}}">
-      {{project.title}}
+
+
+
+      <div class="content">
+        <div class="meta">
+          {{project.title}}
+        </div>
+      </div>
+
     </a>
+
   </div>
 </template>
