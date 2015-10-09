@@ -25,3 +25,15 @@ Template.singleProject.helpers({
   });
   }
 });
+
+Template.singleProject.onCreated(function() {
+  //// TODO: currently copy-pasta from above
+  ////       figure out how to make it more DRY
+
+  let param = FlowRouter.getParam('projectUrl');
+  let project = Projects.findOne({ url: param }, {
+    reactive: false
+  });
+
+  DocHead.setTitle(project.title + ' | Alex Wang');
+});

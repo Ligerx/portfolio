@@ -46,6 +46,7 @@ id-map@1.0.4
 jeremy:selectize@0.12.1_4
 jquery@1.11.4
 kadira:blaze-layout@2.1.0
+kadira:dochead@1.2.2
 kadira:flow-router@2.6.2
 launch-screen@1.0.4
 lepozepo:s3@5.1.2

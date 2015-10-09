@@ -6,3 +6,7 @@ Template.projectsList.helpers({
     });
   }
 });
+
+Template.projectsList.onCreated(function() {
+  DocHead.setTitle('Alex Wang');
+});
