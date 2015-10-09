@@ -12,6 +12,17 @@ Template.imageTemplate.helpers({
   }
 });
 
+Template.imageTemplate.onRendered(function() {
+  this.$('a.fancybox').fancybox({ live: false });
+});
+
+Template.imageGallery.onDestroyed(function() {
+  this.$('a.fancybox').off('click.fb-start');
+});
+
+
+
+
 Template.imageGallery.onRendered(function() {
   this.$(".owl-carousel").owlCarousel({
       items: 1,

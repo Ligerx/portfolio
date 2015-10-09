@@ -50,7 +50,9 @@
         {{!-- no clean way to get the index, so just iterate --}}
         {{#each imageObj in images}}
           <div>
-            <img src="{{imageObj.image.url}}" alt="{{imageObj.alt}}" class="ui centered image">
+            <a class="fancybox" data-fancybox-group="single" href="{{imageObj.image.url}}">
+              <img src="{{imageObj.image.url}}" alt="{{imageObj.alt}}" class="ui centered image">
+            </a>
           </div>
         {{/each}}
 
@@ -66,7 +68,9 @@
   <div class="owl-carousel">
     {{#each imageObj in images}}
       <div>
-        <img src="{{imageObj.image.url}}" alt="{{imageObj.alt}}" class="ui centered image">
+        <a class="fancybox" data-fancybox-group="gallery" href="{{imageObj.image.url}}">
+          <img src="{{imageObj.image.url}}" alt="{{imageObj.alt}}" class="ui centered image">
+        </a>
       </div>
     {{/each}}
   </div>
