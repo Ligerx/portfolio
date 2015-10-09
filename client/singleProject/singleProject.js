@@ -4,7 +4,9 @@ Template.singleProject.helpers({
     let param = FlowRouter.getParam('projectUrl');
 
     // make sure to findOne so {{#with }} works
-    return Projects.findOne({ url: param });
+    return Projects.findOne({ url: param }, {
+      reactive: false
+    });
   },
 
   sections: function() {
