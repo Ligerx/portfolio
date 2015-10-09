@@ -32,3 +32,4 @@ orionjs:s3
 orionjs:image-attribute
 orionjs:relationships
 mrt:fancybox
+tomwasd:flow-router-autoscroll

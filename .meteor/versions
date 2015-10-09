@@ -114,6 +114,7 @@ standard-minifiers@1.0.1
 summernote:standalone@0.6.16
 templating@1.1.4
 templating-tools@1.0.0
+tomwasd:flow-router-autoscroll@0.0.2
 tracker@1.0.9
 ui@1.0.8
 underscore@1.0.4
