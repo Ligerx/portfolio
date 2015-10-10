@@ -2,20 +2,28 @@
   {{#if isSubReady 'allProjects'}}
 
     {{#with project}}
-      <div class="ui main container">
+      <div class="ui singleProject container">
         {{> imageTemplate}}
 
         {{{arbitraryHtml}}}
 
-        <h1 class="ui huge header">{{title}}</h1>
+        <div class="ui segments">
 
-        <div>
-          {{{description}}}
+          <div class="projectSummary ui segment">
+            <div class="ui text container">
+              <h1 class="ui huge header center aligned">{{title}}</h1>
+
+              {{{description}}}
+            </div>
+          </div>
+
+          {{#each section in sections}}
+            <div class="ui very padded segment">
+              {{> projectSection section=section}}
+            </div>
+          {{/each}}
+
         </div>
-
-        {{#each section in sections}}
-          {{> projectSection section=section}}
-        {{/each}}
       </div>
     {{/with}}
 
